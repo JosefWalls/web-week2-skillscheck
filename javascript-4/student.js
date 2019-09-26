@@ -5,39 +5,37 @@
 // Create a new array called 'faveColors' and set it your three favorite colors as strings.
 
 // CODE HERE
-let faveColors = ["Blue", "Orange", "Green"];
+let faveColors = ["Blue", "Orange", "Green"]
 //////////////////Step 2////////////////////
 // Create an object called 'me' that has these keys: firstname, superHeroName, homeTown, superPowers, superPowerXP, profileImage. 
-let me = {
-};
 // The firstName key should be your name as a string. 
 // The superHeroName key should be something fun, feel free to jazz it up e.g. "Bodacious Bryan". 
 // The homeTown key should be your home town. 
 // The superPowers key should be an array of your three super powers as a string. e.g. ['skateboarding', 'crime fighting', 'crime inciting']
 //  The superPowerXP key will be a method that returns a random number between 1-100. Use Math.floor(Math.random() * 100) + 1 
-
 // The profileImage key will return this url `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`.
 
 // CODE HERE
-me.firstName = "Josef";
-me.superHeroName = "Boodilecous Joe";
-me.homeTown = "Lorengau, Papa New Guenia Pig";
-me.superPower = ["Can tell the time even without a clock", "WILL, not maybe, but WILL speak to your manager", "Crime producer"];
-me.superPowerXP = function(){
-    let random = Math.floor(Math.random() * 100) + 1 ;
-    return random;
-}
-me.profileImage = function(){
-    `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`;
+let me = {
+    firstname: "Josef",
+    superHeroName: "Boodielecious Dawg",
+    homeTown: "Jezaa, Papa New Gueina Pig",
+    superPowers: ["Can tell the weather by looking at a forecast", "WILL speak to your manager", "Can speak to adolescant giraffes up to 50 miles away"],
+    superPowerXP: function(){
+        return Math.floor(Math.random() * 100) + 1 
+    },
+    profileImage: function(){
+        return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`}
 }
 //////////////////Step 3////////////////////
 // Create three variables to hold some data off your me object. The first variable should be 'regularName' that is the value of your firstName on the me object. 
 //The next variable is 'superName' which is the value of superHeroName on the me object. Last is 'homeTown' which will be the value of homeTown on the me object
 
 // CODE HERE
-let regularName = me.firstName;
-let superHeroName = me.superHeroName;
-let homeTown = me.homeTown;
+const regularName = me.firstname;
+const superName = me.superHeroName;
+const homeTown = me.homeTown;
+
 //////////////////Step 4////////////////////
 //Create a function called 'setColor' that takes in one param called arr. Just to make sure that we only ever have three colors, use splice to trim the array to 3 colors. 
 
@@ -46,21 +44,21 @@ let homeTown = me.homeTown;
 //This is a function we created for you to set the background colors.
 
 // CODE HERE
+
 function setColor (arr){
-     for(let i = 0; i < arr.length; i++){
-         if(arr[i] === "blue"){
-             arr[i] === "#4D4FF";
-         }
-     } background(arr)
+    arr.splice(0, 4);
+    for(let i = 0; i < arr.length; i++){
+    
+    } background("black", "blue", "black")
 }
 //////////////////Step 5////////////////////
 //Create a function called 'setPowers' that takes in arr as a parameter. Loop over the arr param and run a function called createLi(), which will take each item of the array as an agument. 
 //The createLi function is a function we created to set the data on the screen. It outside the scope of this project
 
 // CODE HERE
-function setPowers(arr){
-    for(let value in arr){
-        createLi(arr[value]);
+function setPowers (arr){
+    for(let i = 0; i < arr.length; i++){
+        createLi(arr[i]);
     }
 }
 
@@ -70,9 +68,8 @@ function setPowers(arr){
 //run the function redacted() which is a function we created that will update the text on the screen.
 
 // CODE HERE
-
-function redactInfo(obj){
-   for(let value in obj){
-      obj[value] = "redacted"
-   } redacted();
+function redactInfo (obj){
+    for(let value in obj){
+       obj[value] = "redacted"
+    } redacted(obj)
 }
