@@ -194,46 +194,15 @@ const people = [
 ]
 
 // Code Here
-
 let enemies = [];
 
 people.filter(function(element){
-	for(let i = 0; i < people.length; i++){
-		if(people[i].friend === false){
-			enemies.push(people[i])
-		} else {
-
-		}
-	}
+  for(let i = 0; i < people.length; i++){
+	  if(people[i].friend === false)
+  }
 })
-// people.filter(function(element){
-// 	for(let i = 0; i <= people.length; i++){
-// 		if(people[i].friend === false){
-//              enemies.push(people[i])
-// 		} else {
-// 			console.log("FWEND")
-// 		}
-// 	}
-// });
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
 // Code Here
-let totallyAwesome = [];
-
-people.reduce(function(total, element){
-	for(let i = people.length - 1; i >= 0; i--){
-		console.log(people.indexOf(people[i]))
-	}
-});
-
-
-// function uniq (array, callback){
-// 	let duplicates = [];
-// 	for(let i = 0; i < array.length; i++){
-// 	  if(duplicates.indexOf(array[i]) === -1){
-// 		duplicates.push(array[i])
-// 	  }
-// 	} callback(duplicates)
-//   }
