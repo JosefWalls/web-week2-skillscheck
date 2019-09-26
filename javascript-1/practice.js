@@ -194,15 +194,50 @@ const people = [
 ]
 
 // Code Here
-let enemies = [];
 
-people.filter(function(element){
-  for(let i = 0; i < people.length; i++){
-	  if(people[i].friend === false)
-  }
-})
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
 // Code Here
+
+
+
+let totallyAwesome = [];
+let awesomeValues = [];
+
+for(let i = 0; i < people.length; i++){
+	awesomeValues.push(people[i].awesomeLevel)
+}
+
+totallyAwesome = awesomeValues.reduce(function(total, element){
+   return total + element;
+})
+
+console.log(totallyAwesome)
+
+
+
+
+
+
+
+
+
+
+
+/////////PROBLEM 19 IS BELOW BECAUSE IT FOR SOME REASON THROWS UP AN ERROR (EVEN THOUGH THERE IS NONE) AND BLOCKS PROBLEM 20
+
+let enemies = [];
+
+people.filter(function(element){
+  for (let i = 0; i <= people.length; i++){
+	  if(people[i].friend === false){
+		  enemies.push(people[i])
+	  } else {
+		  console.log("fwends")
+	  }
+  }
+})
+
+console.log(enemies)
